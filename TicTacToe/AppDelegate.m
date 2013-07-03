@@ -8,13 +8,15 @@
 
 #import "AppDelegate.h"
 
-@implementation AppDelegate
 
+@implementation AppDelegate
+@synthesize circle;
 @synthesize window = _window;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
 }
+
 
 @end
