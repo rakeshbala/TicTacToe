@@ -11,7 +11,9 @@
 #import "NSColor+ColorConversions.h"
 #import "NSBezierPath+GetCGPath.h"
 
-@interface CellView : NSButton
-//@property (strong)  CAShapeLayer *circle;
+@interface CellView : NSButton{
+    NSRect _fillRect;
+}
+@property (nonatomic)  NSRect fillRect;
 
 @end

@@ -20,5 +20,6 @@
 @property (assign) IBOutlet NSTextField *player1Name;
 @property (assign) IBOutlet NSTextField *player2Name;
 - (IBAction)startGame:(id)sender;
+- (IBAction)closeWindow:(id)sender;
 
 @end

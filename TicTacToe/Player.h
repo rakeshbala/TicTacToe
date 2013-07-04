@@ -17,9 +17,11 @@ typedef enum {
     NSString *_name;
     TTMarkType _markType;
     BOOL _active;
+    NSMutableArray *_markArray;
     
 }
 @property (nonatomic) TTMarkType markType;
 @property (strong,nonatomic)NSString *name;
 @property (nonatomic) BOOL active;
+@property (strong) NSMutableArray *markArray;
 @end

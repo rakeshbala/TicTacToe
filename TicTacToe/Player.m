@@ -12,4 +12,15 @@
 @synthesize markType = _markType;
 @synthesize name = _name;
 @synthesize active=_active;
+@synthesize markArray=_markArray;
+
+
+- (id)init {
+    self = [super init];
+    if (self) {
+        _markArray = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
+
 @end

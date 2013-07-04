@@ -18,11 +18,17 @@
     
     
     NewGameWC *_nGameWC;
+    NSArray *_winArrays;
     
 }
  
+
+
+
 @property (strong) Player *player1;
 @property (strong) Player *player2;
+
+@property (strong) NSArray *winArrays;
 
 @property (assign) IBOutlet CellView *cView1;
 @property (assign) IBOutlet CellView *cView2;
@@ -47,8 +53,15 @@
 - (IBAction)setPlayersAndStartGame:(id)sender;
 
 
--(void)drawDotInView:(NSView *)view;
+-(void)initializeWinArraysAndPlayers;
+
+-(void)drawDotInView:(NSView *)view withRadius:(CGFloat)rad;
 -(void)drawCrossInView:(NSView *)view;
+
+-(void)markPlayersWithMarkTypeAndResetBoard:(NSNotification *)notif;
+
+-(void)decideGameWithTag:(NSInteger)tag;
+
 
 #pragma mark - get players -
 -(Player *)getActivePlayer;

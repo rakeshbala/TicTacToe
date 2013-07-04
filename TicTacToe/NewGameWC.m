@@ -31,7 +31,13 @@
 }
 
 - (IBAction)startGame:(id)sender {
+    //init players (this is where the object is first created . Not from MainWC)
+    self.player1 = [[Player alloc] init];
+    self.player2 = [[Player alloc] init];
     
+    
+    
+    //Check for blanks
     NSString *p1Str = [self.player1Name.stringValue stringByReplacingOccurrencesOfString:@" " withString:@""];
     NSString *p2Str = [self.player2Name.stringValue stringByReplacingOccurrencesOfString:@" " withString:@""];
     
@@ -40,9 +46,9 @@
         return;
     }
     
-    
-    self.player1.name = self.player1Name.stringValue;
-    self.player2.name = self.player2Name.stringValue;
+    //assign name
+    self.player1.name = [self.player1Name.stringValue uppercaseString];
+    self.player2.name = [self.player2Name.stringValue uppercaseString];
     
     
     
@@ -59,6 +65,13 @@
         player2.markType = Dot;
         player2.active = YES;
     }
+    
+    //post the notification that everything is done
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"PlayersSet" object:self];
+    [self.window close];
+}
+
+- (IBAction)closeWindow:(id)sender {
     [self.window close];
 }
 @end
