@@ -50,8 +50,8 @@
 -(void)drawDotInView:(NSView *)view;
 -(void)drawCrossInView:(NSView *)view;
 
-
+#pragma mark - get players -
 -(Player *)getActivePlayer;
-
+-(Player *)getInactivePlayer;
 
 @end

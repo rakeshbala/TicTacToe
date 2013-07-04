@@ -12,7 +12,6 @@
 #import "NSBezierPath+GetCGPath.h"
 
 @interface CellView : NSButton
-@property (strong)  CAShapeLayer *circle;
-//@property (strong) CABasicAnimation *drawAnimation;
+//@property (strong)  CAShapeLayer *circle;
 
 @end
